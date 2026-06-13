@@ -46,7 +46,7 @@ const App = () => {
               <span className="text-sm text-sky-700">{user.email}</span>
             </div>
             <button
-              className="cursor-pointer rounded-full bg-sky-100 px-2.5 py-1 text-sm font-medium text-sky-700"
+              className="cursor-pointer rounded-md bg-sky-100 px-2.5 py-1 text-sm font-medium text-sky-700"
               onClick={() => handleUserRemove(user.id)}
             >
               Remove
