@@ -1,10 +1,5 @@
 import { useState, type ChangeEvent } from 'react';
-
-interface User {
-  id: string;
-  name: string;
-  email: string;
-}
+import type { User } from './types';
 
 const App = () => {
   const [users, setUsers] = useState<User[] | []>([
