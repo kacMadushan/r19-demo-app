@@ -1,4 +1,5 @@
 import { useMemo, useState, type ChangeEvent } from 'react';
+import { motion } from 'motion/react';
 import type { User } from './types';
 
 const App = () => {
@@ -54,9 +55,14 @@ const App = () => {
         ))}
       </ul>
     ) : (
-      <div className="text-center text-sm text-gray-600">
+      <motion.div
+        initial={{ y: '100%', opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: 'spring', damping: 15, stiffness: 100 }}
+        className="text-center text-base text-gray-600"
+      >
         Did not match. Please search again.
-      </div>
+      </motion.div>
     );
 
   return (
